@@ -1,0 +1,96 @@
+<svg width='160.0' height='160.0' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<title>Basis function in a Brezzi-Douglas-Marini space</title>
+<desc>This plot is from DefElement (https://defelement.com) and is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license: https://creativecommons.org/licenses/by/4.0/</desc>
+<metadata id='license'>
+ <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://web.resource.org/cc/'>
+   <cc:Work rdf:about=''>
+     <dc:title>Basis function in a Brezzi-Douglas-Marini space</dc:title>
+     <dc:date>2021-05-08</dc:date>
+     <dc:creator>
+       <cc:Agent><dc:title>DefElement</dc:title></cc:Agent>
+       <cc:Agent><dc:title>Matthew Scroggs</dc:title></cc:Agent>
+     </dc:creator>
+     <dc:description>See document description</dc:description>
+     <cc:license rdf:resource='http://creativecommons.org/licenses/by/4.0/'/>
+     <dc:format>image/svg+xml</dc:format>
+     <dc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/>
+   </cc:Work>
+   <cc:License rdf:about='http://creativecommons.org/licenses/by/4.0/'>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Reproduction'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Distribution'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/DerivativeWorks'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Notice'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Attribution'/>
+   </cc:License>
+ </rdf:RDF>
+</metadata>
+<line x1='130.0' y1='130.0' x2='30.0' y2='30.0' stroke-width='3px' stroke-linecap='round' stroke='#AAAAAA' />
+<line x1='30.0' y1='130.0' x2='30.0' y2='30.0' stroke-width='3px' stroke-linecap='round' stroke='#44AAFF' />
+<line x1='30.0' y1='130.0' x2='130.0' y2='130.0' stroke-width='3px' stroke-linecap='round' stroke='#AAAAAA' />
+<line x1='37.14285714285714' y1='122.85714285714286' x2='39.99343507059935' y2='121.14679610049754' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='39.48603219946123' y1='121.91645214098793' x2='39.99343507059935' y2='121.14679610049754' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='39.075548977866355' y1='121.2323134383298' x2='39.99343507059935' y2='121.14679610049754' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='37.14285714285714' y1='108.57142857142857' x2='33.15204804401805' y2='104.58061947258949' stroke-width='0.5643856352420191px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='34.62864741058851' y1='105.09942465543857' x2='33.15204804401805' y2='104.58061947258949' stroke-width='0.5643856352420191px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='33.67085322686714' y1='106.05721883915994' x2='33.15204804401805' y2='104.58061947258949' stroke-width='0.5643856352420191px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='37.14285714285714' y1='94.28571428571428' x2='29.35127747369511' y2='89.53475107281061' stroke-width='0.9125807645971021px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='31.869287976534057' y1='89.78750231573709' x2='29.35127747369511' y2='89.53475107281061' stroke-width='0.9125807645971021px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='30.729056805437178' y1='91.65748143633597' x2='29.35127747369511' y2='89.53475107281061' stroke-width='0.9125807645971021px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='37.14285714285714' y1='80.0' x2='28.591123359630522' y2='76.0091909011609' stroke-width='0.9437092134898141px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='31.207953897297866' y1='75.9806851218835' x2='28.591123359630522' y2='76.0091909011609' stroke-width='0.9437092134898141px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='30.250159713576483' y1='78.03310122985788' x2='28.591123359630522' y2='76.0091909011609' stroke-width='0.9437092134898141px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='37.14285714285714' y1='65.71428571428571' x2='30.871585701824287' y2='64.00393895764039' stroke-width='0.6500317801083384px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='32.64464517287994' y1='63.67897307387777' x2='30.871585701824287' y2='64.00393895764039' stroke-width='0.6500317801083384px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='32.23416195128507' y1='65.18407821972566' x2='30.871585701824287' y2='64.00393895764039' stroke-width='0.6500317801083384px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='37.14285714285714' y1='51.42857142857143' x2='36.1926645002764' y2='53.51899524224905' stroke-width='0.22962442768148672px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='36.17936180328027' y1='52.88236617171995' x2='36.1926645002764' y2='53.51899524224905' stroke-width='0.22962442768148672px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='36.681063518562894' y1='53.11041240593934' x2='36.1926645002764' y2='53.51899524224905' stroke-width='0.22962442768148672px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.42857142857143' y1='122.85714285714286' x2='54.735241824752386' y2='121.6028885689363' stroke-width='0.3536555234753745px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='54.05908474029194' y1='122.31325258852965' x2='54.735241824752386' y2='121.6028885689363' stroke-width='0.3536555234753745px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='53.75806371112236' y1='121.5196516934462' x2='54.735241824752386' y2='121.6028885689363' stroke-width='0.3536555234753745px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.42857142857143' y1='108.57142857142857' x2='49.41416302630027' y2='105.94889687790574' stroke-width='0.330688882405689px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='50.2324689300908' y1='106.36280079301392' x2='49.41416302630027' y2='105.94889687790574' stroke-width='0.330688882405689px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='49.60306132364532' y1='106.84625880955898' x2='49.41416302630027' y2='105.94889687790574' stroke-width='0.330688882405689px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.42857142857143' y1='94.28571428571428' x2='47.1337006841065' y2='91.81521341500437' stroke-width='0.4954723934170213px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='48.503878474707925' y1='91.91745414334605' x2='47.1337006841065' y2='91.81521341500437' stroke-width='0.4954723934170213px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='47.91095826573754' y1='92.94822312201762' x2='47.1337006841065' y2='91.81521341500437' stroke-width='0.4954723934170213px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.42857142857143' y1='80.0' x2='47.89385479817109' y2='79.20183818023219' stroke-width='0.3623711349951015px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='48.873313374143315' y1='78.9772126395261' x2='47.89385479817109' y2='79.20183818023219' stroke-width='0.3623711349951015px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='48.68175453739904' y1='79.82554463082218' x2='47.89385479817109' y2='79.20183818023219' stroke-width='0.3623711349951015px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.42857142857143' y1='65.71428571428571' x2='51.69462536849403' y2='68.10877117358916' stroke-width='0.24092208935180728px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.34077362839697' y1='67.54207628155402' x2='51.69462536849403' y2='68.10877117358916' stroke-width='0.24092208935180728px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='51.9154501386298' y1='67.47822333597259' x2='51.69462536849403' y2='68.10877117358916' stroke-width='0.24092208935180728px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.71428571428572' y1='122.85714285714286' x2='69.17298693327959' y2='122.05898103737505' stroke-width='0.3549602289384658px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='68.40409104690326' y1='122.67356563859626' x2='69.17298693327959' y2='122.05898103737505' stroke-width='0.3549602289384658px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='68.212532210159' y1='121.84347734603773' x2='69.17298693327959' y2='122.05898103737505' stroke-width='0.3549602289384658px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.71428571428572' y1='108.57142857142857' x2='65.37221636295666' y2='107.317174283222' stroke-width='0.13000635602166755px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.60824421537373' y1='107.58968953311415' x2='65.37221636295666' y2='107.317174283222' stroke-width='0.13000635602166755px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.30722318620414' y1='107.67178617743313' x2='65.37221636295666' y2='107.317174283222' stroke-width='0.13000635602166755px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.71428571428572' y1='94.28571428571428' x2='64.61206224889206' y2='94.09567575719814' stroke-width='0.11184861241807932px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='64.9104227386624' y1='94.01091857347993' x2='64.61206224889206' y2='94.09567575719814' stroke-width='0.11184861241807932px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='64.86481349181854' y1='94.27545220517442' x2='64.61206224889206' y2='94.09567575719814' stroke-width='0.11184861241807932px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='65.71428571428572' y1='80.0' x2='66.89252459108583' y2='82.39448545930345' stroke-width='0.2668671479522885px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='66.3106266167694' y1='81.9372527596936' x2='66.89252459108583' y2='82.39448545930345' stroke-width='0.2668671479522885px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='66.88530312700222' y1='81.65447542926158' x2='66.89252459108583' y2='82.39448545930345' stroke-width='0.2668671479522885px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='80.0' y1='122.85714285714286' x2='83.30667039618095' y2='122.5150735058138' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='82.5210511192952' y1='122.99739129118777' x2='83.30667039618095' y2='122.5150735058138' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='82.43895447497623' y1='122.20379039610435' x2='83.30667039618095' y2='122.5150735058138' stroke-width='0.33243165538345215px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='80.0' y1='108.57142857142857' x2='81.0262080539872' y2='108.68545168853827' stroke-width='0.10325232400791737px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='80.75597326643724' y1='108.7800908757393' x2='81.0262080539872' y2='108.68545168853827' stroke-width='0.10325232400791737px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='80.78333881454357' y1='108.53380094278238' x2='81.0262080539872' y2='108.68545168853827' stroke-width='0.10325232400791737px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='80.0' y1='94.28571428571428' x2='81.78636216805178' y2='96.37613809939191' stroke-width='0.2749720261451543px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='81.08892076839753' y1='96.0678956061387' x2='81.78636216805178' y2='96.37613809939191' stroke-width='0.2749720261451543px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='81.59062248368015' y1='95.63916868580628' x2='81.78636216805178' y2='96.37613809939191' stroke-width='0.2749720261451543px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='94.28571428571429' y1='122.85714285714286' x2='97.1362922134565' y2='122.97116597425254' stroke-width='0.28528574786284827px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='96.40996495746778' y1='123.28472954630419' x2='97.1362922134565' y2='122.97116597425254' stroke-width='0.28528574786284827px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='96.43733050557411' y1='122.60059084364605' x2='97.1362922134565' y2='122.97116597425254' stroke-width='0.28528574786284827px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='94.28571428571429' y1='108.57142857142857' x2='96.37613809939191' y2='110.05372909385451' stroke-width='0.2562632739893627px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='95.6756560832814' y1='109.93400482088934' x2='96.37613809939191' y2='110.05372909385451' stroke-width='0.2562632739893627px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='96.03140820866362' y1='109.43230310560672' x2='96.37613809939191' y2='110.05372909385451' stroke-width='0.2562632739893627px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='108.57142857142857' y1='122.85714285714286' x2='110.66185238510619' y2='123.4272584426913' stroke-width='0.21667726003611265px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='110.07083256142097' y1='123.5355804039455' x2='110.66185238510619' y2='123.4272584426913' stroke-width='0.21667726003611265px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='110.2076603019526' y1='123.03387868866288' x2='110.66185238510619' y2='123.4272584426913' stroke-width='0.21667726003611265px' stroke-linecap='round' stroke='#FF8800' />
+<line x1='30.0' y1='80.0' x2='5.0' y2='80.0' stroke-width='2px' stroke-linecap='round' stroke='#DD2299' />
+<line x1='11.25' y1='77.0' x2='5.0' y2='80.0' stroke-width='2px' stroke-linecap='round' stroke='#DD2299' />
+<line x1='11.25' y1='83.0' x2='5.0' y2='80.0' stroke-width='2px' stroke-linecap='round' stroke='#DD2299' />
+<circle cx='30.0' cy='80.0' r='10px' fill='white' stroke='#DD2299' stroke-width='2px' /><text x='30.0' style="font-family:'Varela Round',sans" y='80.0' text-anchor='middle' dominant-baseline='middle' fill='#DD2299'>4</text></svg>

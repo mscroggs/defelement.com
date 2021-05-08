@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>How to define a finite element</h1>
+<p>This page describes how finite elements are defined in the DefElement database. </p>
+<h2>Cell subentities</h2>
+<p>Throughout this website, the subentities of a reference element will be referred to as described here. </p>
+<p>The vertices, edges, faces, and volumes of a reference element have dimension 0, 1, 2, and 3 (respectively). The (topological) dimension \(d\) is the dimension of the reference element itself. (When using the finite element method, the topological dimensions may differ from the <em>geometric</em> dimension: for example, when meshing a 2D manifold in 3D space, the topological and geometric dimensions are 2 and 3 (respectively).) </p>
+<p>The codimension of an entity is given by subtracting the dimension of the entity from the topological dimension of the reference element. Entities of codimension 1, 2, and 3 are called facets, ridges and peaks (respectively). The usual names given to entities of reference elements of topological dimensions 0 to 3 are shown below. </p>
+<center> <table class='bordered'> <thead> <tr><td>Topological dimension</td><td colspan=4>Entities by dimension</td><td colspan=4>Entities by codimension</td></tr> <tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>0</td><td>1 (facets)</td><td>2 (ridges)</td><td>3 (peaks)</td></td> </thead> <tr><td>0 (a vertex)</td><td>point</td><td>-</td><td>-</td><td>-</td><td>cell</td><td>-</td><td>-</td><td>-</td></tr> <tr><td>1 (an interval)</td><td>points</td><td>edge</td><td>-</td><td>-</td><td>cell</td><td>points</td><td>-</td><td>-</td></tr> <tr><td>2 (a polygon)</td><td>points</td><td>edges</td><td>face</td><td>-</td><td>cell</td><td>edges</td><td>points</td><td>-</td></tr> <tr><td>3 (a polyhedron)</td><td>points</td><td>edges</td><td>faces</td><td>volume</td><td>cell</td><td>faces</td><td>edges</td><td>points</td></tr> </table> </center> <h2>Ciarlet finite elements</h2>
+<p>The Ciarlet definition<sup><a href='#ref1'>[1]</a></sup> defines a finite element by a triple \((R,\mathcal{V},\mathcal{L})\), where </p>
+<ul> <li>\(R\subset\mathbb{R}^d\) is the reference element, ususally a polygon or polyhedron;</li> <li>\(\mathcal{V}\) is a finite dimensional polynomial space on \(R\) of dimension \(n\);</li> <li>\(\mathcal{L}=\{l_0,...,l_{n-1}\}\) is a basis of the dual space \(\mathcal{V}^*=\{f:\mathcal{V}\to\mathbb{R}\}\).</li> </ul> <p>The basis functions \(\{\phi_0,...,\phi_{n-1}\}\) of the finite element space are defined by </p>
+\[l_i(\phi_j) = \begin{cases}1&i=j\\0&i\not=j\end{cases}\] <h3>Example: Order 1 Lagrange space on a triangle</h3>
+<p>An order 1 <a href='/elements/lagrange.html'>Lagrange space</a> on a triangle is defined by: </p>
+<ul> <li>\(R\) is a triangle with vertices at \((0,0)\), \((1,0)\) and \((0,1)\);</li> <li>\(\mathcal{V}=\operatorname{span}\{1, x, y\}\);</li> <li>\(\mathcal{L}=\{l_0,l_1,l_2\}\). </ul> <p>The functionals \(l_1\) to \(l_3\) are defined as point evaluations at the three vertices of the triangle: </p>
+\[l_0:v\mapsto v(0,0)\] \[l_1:v\mapsto v(1,0)\] \[l_2:v\mapsto v(0,1)\] <p>It follows from these definitions that the basis functions of the finite element spaces are linear functions that are equal 1 to at one of the vertices, and equal to 0 at the other two. These are: </p>
+\[\phi_0(x,y)=1-x-y\] \[\phi_1(x,y)=x\] \[\phi_2(x,y)=y\] <p><center><a href='/img/element-Lagrange-1-0.html'><img src='/img/element-Lagrange-1-0.png'></a><a href='/img/element-Lagrange-1-1.html'><img src='/img/element-Lagrange-1-1.png'></a><a href='/img/element-Lagrange-1-2.html'><img src='/img/element-Lagrange-1-2.png'></a></center> </p>
+<h2>Integral moments</h2>
+<p>It is common to use integral moment functionals when defining finite elements. Given a mesh entity \(e\) and a finite element space \((e,\mathcal{V}_e,\mathcal{L}_e)\) defined on \(e\), the integral moment functionals \(l_1,...,l_{n_e}\) are defined by \[l_i:v\mapsto \int_e v\phi_i,\] where \(\phi_1,...,\phi_{n_e}\) are the basis functions of the finite element space on \(e\). </p>
+<p>For vector-values spaces, integral moment functional can be defined using a vector-valued space on \(e\) and taking the dot product inside the integral, \[l_i:\boldsymbol{v}\mapsto \int_e \boldsymbol{v}\cdot\boldsymbol{\phi}_i.\] Alternatively, an integral moment can be taken with a scalar-valued space by taking the dot product with a fixed vector \(\boldsymbol{a}\), \[l_i:\boldsymbol{v}\mapsto \int_e \boldsymbol{v}\cdot\boldsymbol{a}\,\phi_i.\] Typically, \(\boldsymbol{a}\) will be tangent to an edge, normal to a facet, or a unit vector in one of the coordinate directions. </p>
+<h3>Example: Order 1 N&eacute;d&eacute;lec (second kind) space on a triangle</h3>
+<p>The functionals that define an order 1 <a href='/elements/nedelec2.html'>N&eacute;d&eacute;lec (second kind) space</a> on a triangle<sup><a href='#ref2'>[2]</a></sup> are tangential integral moments with order 1 Lagrange spaces on the edges of the triangle. For example, the two functionals on the edge \(e_0\) of the triangle between \((1,0)\) and \((0,1)\) are \[l_0:\boldsymbol{v}\to\int_{e_0}\boldsymbol{v}\cdot\left(\begin{array}{c}-\frac1{\sqrt2}\\\frac1{\sqrt{2}}\end{array}\right)(1-t_0),\] \[l_1:\boldsymbol{v}\to\int_{e_0}\boldsymbol{v}\cdot\left(\begin{array}{c}-\frac1{\sqrt2}\\\frac1{\sqrt{2}}\end{array}\right)t_0,\] where \(t_0\) varies from 0 (at \((1,0)\)) to 1 (at \((0,1)\)) along \(e_0\). </p>
+<p>The basis functions of this space are: <center><a href='/img/element-Nedelec2-1-0.html'><img src='/img/element-Nedelec2-1-0.png'></a><a href='/img/element-Nedelec2-1-1.html'><img src='/img/element-Nedelec2-1-1.png'></a><a href='/img/element-Nedelec2-1-2.html'><img src='/img/element-Nedelec2-1-2.png'></a><a href='/img/element-Nedelec2-1-3.html'><img src='/img/element-Nedelec2-1-3.png'></a><a href='/img/element-Nedelec2-1-4.html'><img src='/img/element-Nedelec2-1-4.png'></a><a href='/img/element-Nedelec2-1-5.html'><img src='/img/element-Nedelec2-1-5.png'></a></center> </p>
+<h2>Mapping finite elements</h2>
+<p>In order to maintain desired properties when mapping finite elements from a reference element to an actual mesh, an appropriate mapping must be defined.<sup><a href='#ref3'>[3]</a></sup> (For elements with a mixture of functional types, a more complex approach is required.<sup><a href='#ref4'>[4]</a></sup>) </p>
+<p>Let \(F\) be a transformation that maps the reference element to a cell in the mesh, and let \(\boldsymbol{x}\) be a point in the cell. </p>
+<p>The Jacobian, \(\mathbf{J}\), of the transformation \(F\) is \(\displaystyle\frac{\mathrm{d}F}{\mathrm{d}x}\) for 1D reference elements, \(\displaystyle\left( \begin{array}{cc} \frac{\partial F_1}{\partial x}&\frac{\partial F_1}{\partial y}\\ \frac{\partial F_2}{\partial x}&\frac{\partial F_2}{\partial y} \end{array} \right)\) for 2D reference elements, or \(\displaystyle\left( \begin{array}{ccc} \frac{\partial F_1}{\partial x}&\frac{\partial F_1}{\partial y}&\frac{\partial F_1}{\partial z}\\ \frac{\partial F_2}{\partial x}&\frac{\partial F_2}{\partial y}&\frac{\partial F_2}{\partial z}\\ \frac{\partial F_3}{\partial x}&\frac{\partial F_3}{\partial y}&\frac{\partial F_3}{\partial z} \end{array} \right)\) for 3D reference elements. </p>
+<h3>Scalar-valued basis functions</h3>
+<p>The simplest mapping&mdash;used to map scalar basis functions, \(\phi\)&mdash;is defined by $$\left(\mathcal{F}\phi\right)(\boldsymbol{x}) :=\phi(F^{-1}(\boldsymbol{x})).$$ The term \(F^{-1}(\boldsymbol{x})\) is the point on the reference element corresponding to the point \(\boldsymbol{x}\), so this mapping maps a value of the function on the reference to the same value at the corresponding point. </p>
+<h3>Vector-valued basis functions</h3>
+<p>For vector-valued basis functions, \(\boldsymbol{\phi}\), the <b>covariant Piola</b> (\(\mathcal{F}^\text{curl}\)) and <b>contravariant Piola</b> (\(\mathcal{F}^\text{div}\)) mappings are defined: $$\left(\mathcal{F}^\text{curl}\boldsymbol{\phi}\right)(\boldsymbol{x}) :=\mathbf{J}^{-T}\boldsymbol{\phi}(F^{-1}(\boldsymbol{x}))$$ $$\left(\mathcal{F}^\text{div}\boldsymbol{\phi}\right)(\boldsymbol{x}) :=\frac1{\det \mathbf{J}}\mathbf{J}\boldsymbol{\phi}(F^{-1}(\boldsymbol{x}))$$ The covariant Piola mapping preserves the tangential component of basis functions on edges and facets, and are typically used to map H(div) elements. The contravariant Piola mapping preserves the normal component of basis functions on facets, and are typically used to map H(curl) elements. </p>
+<h3>Matrix-valued basis functions</h3>
+<p>For matrix-valued basis functions, \(\mathbf{\Phi}\), the <b>double covariant Piola</b> (\(\mathcal{F}^\text{curl curl}\)) and <b>double contravariant Piola</b> (\(\mathcal{F}^\text{div div}\)) mappings are defined: $$\left(\mathcal{F}^\text{curl curl}\mathbf{\Phi}\right)(\boldsymbol{x}) :=\mathbf{J}^{-T}\mathbf{\Phi}(F^{-1}(\boldsymbol{x}))\mathbf{J}^{-1}$$ $$\left(\mathcal{F}^\text{div div}\mathbf{\Phi}\right)(\boldsymbol{x}) :=\frac1{\left(\det \mathbf{J}\right)^2}\mathbf{J}\mathbf{\Phi}(F^{-1}(\boldsymbol{x}))\mathbf{J}^T$$ </p>
+<h2>Notation</h2>
+<p>Throughout this website, the notation given here in this section is used. </p>
+<table> <tr><td style='padding-right:10px'>\(R\)</td><td>A reference element</td></tr> <tr><td style='padding-right:10px'>\(\mathcal{V}\)</td><td>A polynomial set</td></tr> <tr><td style='padding-right:10px'>\(\mathcal{L}\)</td><td>A dual basis</td></tr> <tr><td style='padding-right:10px'>\(l_i\)</td><td>A functional in the dual basis</td></tr> <tr><td style='padding-right:10px'>\(\phi_i\)</td><td>A scalar basis function</td></tr> <tr><td style='padding-right:10px'>\(\boldsymbol{\phi}_i\)</td><td>A vector basis function</td></tr> <tr><td style='padding-right:10px'>\(\mathbf{\Phi}_i\)</td><td>A matrix basis function</td></tr> <tr><td style='padding-right:10px'>\(\mathbf{J}\)</td><td>Jacobian</td></tr> <tr><td style='padding-right:10px'>\(F\)</td><td>A map from a reference to a cell in a mesh</td></tr> <tr><td style='padding-right:10px'>\(\mathcal{F}\)</td><td>A mapping</td></tr> <tr><td style='padding-right:10px'>\(v_i\)</td><td>The \(i\)th vertex</td></tr> <tr><td style='padding-right:10px'>\(e_i\)</td><td>The \(i\)th edge</td></tr> <tr><td style='padding-right:10px'>\(f_i\)</td><td>The \(i\)th face</td></tr> <tr><td style='padding-right:10px'>\(c_i\)</td><td>The \(i\)th volume</td></tr> <tr><td style='padding-right:10px'>\(d\)</td><td>Geometric dimension</td></tr> <tr><td style='padding-right:10px'>\(r\)</td><td>Exterior derivative order</td></tr> </table> <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> Ciarlet, P. G. The Finite Element Method for Elliptic Problems, 1978.</li><li><a class='refid' id='ref2'>[2]</a> N&eacute;d&eacute;lec, J. C. A new family of mixed finite elements in \(\mathbb{R}^3\), <em>Numerische Mathematik</em> 50(1), 57&ndash;81, 1986. [DOI:&nbsp;<a href='https://doi.org/10.1007/BF01389668'>10.1007/BF01389668</a>]</li><li><a class='refid' id='ref3'>[3]</a> Rognes, M. E. and Kirby, R. C. and Logg, A. Efficient assembly of H(div) and H(curl) conforming finite elements, <em>SIAM Journal on Scientific Computing</em> 31, 4130&ndash;4151, 2009. [DOI:&nbsp;<a href='https://doi.org/10.1137/08073901X'>10.1137/08073901X</a>]</li><li><a class='refid' id='ref4'>[4]</a> Kirby, R. C. A general approach to transforming finite elements, <em>The SMAI journal of computational mathematics</em> 4, 197&ndash;224, 2018. [DOI:&nbsp;<a href='https://doi.org/10.5802/smai-jcm.33'>10.5802/smai-jcm.33</a>]</li></ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

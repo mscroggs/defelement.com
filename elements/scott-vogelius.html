@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement: Scott&ndash;Vogelius</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Scott&ndash;Vogelius</h1><p><small><a href='/ciarlet.html'>Click here to read what the information on this page means.</a></small></p><table class='element-info'><tr><td>Orders</td><td>\(1\leqslant k\)</td></tr><tr><td>Reference&nbsp;elements</td><td><a href='/lists/references/triangle.html'>triangle</a>, <a href='/lists/references/tetrahedron.html'>tetrahedron</a></td></tr><tr><td>Definition</td><td>This is a mixed element containing these subelements:<ul><li>order \(k\) <a href='/elements/vector-lagrange.html'>vector Lagrange</a> space</li>
+<li>order \(k-1\) <a href='/elements/lagrange.html'>Lagrange</a> space</li></ul></td></tr><tr><td>Number&nbsp;of&nbsp;DOFs</td><td>triangle: \((k+1)(3k+4)/2\)<br />tetrahedron: \((k+1)(k+2)(4k+9)/6\)</td></tr><tr><td>Notes</td><td>This is the same as the <a href='/elements/taylor-hood.html'>Taylor&ndash;Hood</a> element, but the second subelement in this case is discontinuous between cells.</td></tr><tr><td>Categories</td><td><a href='/lists/categories/mixed.html'>Mixed elements</a></td></tr></table><h2>References</h2>
+<ul class='citations'>
+<li>Scott, L. R. and Vogelius, M. Norm estimates for a maximal right inverse of the divergence operator in spaces of piecewise polynomials, <em>ESAIM: Mathematical Modelling and Numerical Analysis - Mod&eacute;lisation Math&eacute;matique et Analyse Num&eacute;rique</em> 19, 111&ndash;143, 1985. [<a href='/elements/bibtex/contributing-0.bib'>BibTeX</a>]</li>
+<li>Zhang, S. A new family of stable mixed finite elements for the 3D Stokes equations, <em>Mathematics of Computation</em> 74, 543&ndash;554, 2005. [DOI:&nbsp;<a href='https://doi.org/10.2307/4100078'>10.2307/4100078</a>] [<a href='/elements/bibtex/contributing-1.bib'>BibTeX</a>]</li>
+</ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

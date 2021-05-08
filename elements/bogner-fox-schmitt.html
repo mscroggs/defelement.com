@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement: Bogner&ndash;Fox&ndash;Schmitt</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Bogner&ndash;Fox&ndash;Schmitt</h1><p><small><a href='/ciarlet.html'>Click here to read what the information on this page means.</a></small></p><table class='element-info'><tr><td>Orders</td><td>\(k=3\)</td></tr><tr><td>Reference&nbsp;elements</td><td><a href='/lists/references/quadrilateral.html'>quadrilateral</a></td></tr><tr><td>Polynomial&nbsp;set</td><td>\(\mathcal{Q}_{k}\)<br /><a id='show_pset_link' href='javascript:show_psets()' style='display:block'>&darr; Show polynomial set definitions &darr;</a><a id='hide_pset_link' href='javascript:hide_psets()' style='display:none'>&uarr; Hide polynomial set definitions &uarr;</a><div id='psets' style='display:none'>\(\mathcal{Q}_k=\operatorname{span}\left\{\prod_{i=1}^dx_i^{p_i}\middle|\max_i(p_i)\leqslant k\right\}\)</div><script type='text/javascript'>
+function show_psets(){
+  document.getElementById('show_pset_link').style.display = 'none'
+  document.getElementById('hide_pset_link').style.display = 'block'
+  document.getElementById('psets').style.display = 'block'
+}
+function hide_psets(){
+  document.getElementById('show_pset_link').style.display = 'block'
+  document.getElementById('hide_pset_link').style.display = 'none'
+  document.getElementById('psets').style.display = 'none'
+}
+</script></td></tr><tr><td>DOFs</td><td>On each vertex: point evaluations, and point evaluations of derivatives in coordinate directions</td></tr><tr><td>Number&nbsp;of&nbsp;DOFs</td><td>quadrilateral: \(16\)</td></tr><tr><td>Categories</td><td><a href='/lists/categories/scalar.html'>Scalar-valued elements</a></td></tr></table><h2>Implementations</h2>
+<table class='element-info'><tr><td>Symfem&nbsp;string</td><td><code>"BFS"</code><br /><a id='show_symfem_link' href='javascript:show_symfem_eg()' style='display:block'>&darr; Show Symfem examples &darr;</a><a id='hide_symfem_link' href='javascript:hide_symfem_eg()' style='display:none'>&uarr; Hide Symfem examples &uarr;</a><div id='symfem_eg' style='display:none'>Before trying this example, you must install <a href='https://github.com/mscroggs/symfem'>Symfem</a>:<p class='pcode'>pip3 install symfem</p>This element can then be created with the following lines of Python:<p class='pcode'>import&nbsp;symfem<br /><br /><span style='color:#FF8800'>#&nbsp;Create&nbsp;Bogner-Fox-Schmitt&nbsp;order&nbsp;3&nbsp;on&nbsp;a&nbsp;quadrilateral</span><br />element&nbsp;=&nbsp;symfem.create_element(<span style='color:#DD2299'>"quadrilateral"</span>,&nbsp;<span style='color:#DD2299'>"BFS"</span>,&nbsp;3)</p></div><script type='text/javascript'>
+function show_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='none'
+ document.getElementById('hide_symfem_link').style.display='block'
+ document.getElementById('symfem_eg').style.display='block'
+}
+function hide_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='block'
+ document.getElementById('hide_symfem_link').style.display='none'
+ document.getElementById('symfem_eg').style.display='none'
+}
+</script></td></tr></table><h2>Examples</h2>
+<a class='eglink current' href='javascript:showeg(0)' id='eg0'>quadrilateral<br />order 3</a><div class='egdetail current' id='egd0'><ul>
+<li>\(R\) is the reference quadrilateral. The following numbering of the subentities of the reference is used:</li>
+<center><a href='/img/ref-quadrilateral.html'><img src='/img/ref-quadrilateral.png'></a></center>
+<li>\(\mathcal{V}\) is spanned by: \(1\), \(y\), \(y^{2}\), \(y^{3}\), \(x\), \(x y\), \(x y^{2}\), \(x y^{3}\), \(x^{2}\), \(x^{2} y\), \(x^{2} y^{2}\), \(x^{2} y^{3}\), \(x^{3}\), \(x^{3} y\), \(x^{3} y^{2}\), \(x^{3} y^{3}\)</li>
+<li>\(\mathcal{L}=\{l_0,...,l_{15}\}\)</li>
+<li>Functionals and basis functions:</li></ul><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-0.html'><img src='/img/element-Bogner-Fox-Schmit-3-0.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{0}:v\mapsto v(0,0)\)<br /><br />\(\displaystyle \phi_{0} = 4 x^{3} y^{3} - 6 x^{3} y^{2} + 2 x^{3} - 6 x^{2} y^{3} + 9 x^{2} y^{2} - 3 x^{2} + 2 y^{3} - 3 y^{2} + 1\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-1.html'><img src='/img/element-Bogner-Fox-Schmit-3-1.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{1}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(0,0)\)<br /><br />\(\displaystyle \phi_{1} = x \left(2 x^{2} y^{3} - 3 x^{2} y^{2} + x^{2} - 4 x y^{3} + 6 x y^{2} - 2 x + 2 y^{3} - 3 y^{2} + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-2.html'><img src='/img/element-Bogner-Fox-Schmit-3-2.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{2}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(0,0)\)<br /><br />\(\displaystyle \phi_{2} = y \left(2 x^{3} y^{2} - 4 x^{3} y + 2 x^{3} - 3 x^{2} y^{2} + 6 x^{2} y - 3 x^{2} + y^{2} - 2 y + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-3.html'><img src='/img/element-Bogner-Fox-Schmit-3-3.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{3}:v\mapsto\frac{\partial^{2}}{\partial x\partial y}\nabla{v}(0,0)\)<br /><br />\(\displaystyle \phi_{3} = x y \left(x^{2} y^{2} - 2 x^{2} y + x^{2} - 2 x y^{2} + 4 x y - 2 x + y^{2} - 2 y + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-4.html'><img src='/img/element-Bogner-Fox-Schmit-3-4.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{4}:v\mapsto v(1,0)\)<br /><br />\(\displaystyle \phi_{4} = x^{2} \left(- 4 x y^{3} + 6 x y^{2} - 2 x + 6 y^{3} - 9 y^{2} + 3\right)\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-5.html'><img src='/img/element-Bogner-Fox-Schmit-3-5.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{5}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(1,0)\)<br /><br />\(\displaystyle \phi_{5} = x^{2} \left(2 x y^{3} - 3 x y^{2} + x - 2 y^{3} + 3 y^{2} - 1\right)\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-6.html'><img src='/img/element-Bogner-Fox-Schmit-3-6.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{6}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(1,0)\)<br /><br />\(\displaystyle \phi_{6} = x^{2} y \left(- 2 x y^{2} + 4 x y - 2 x + 3 y^{2} - 6 y + 3\right)\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-7.html'><img src='/img/element-Bogner-Fox-Schmit-3-7.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{7}:v\mapsto\frac{\partial^{2}}{\partial x\partial y}\nabla{v}(1,0)\)<br /><br />\(\displaystyle \phi_{7} = x^{2} y \left(x y^{2} - 2 x y + x - y^{2} + 2 y - 1\right)\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-8.html'><img src='/img/element-Bogner-Fox-Schmit-3-8.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{8}:v\mapsto v(0,1)\)<br /><br />\(\displaystyle \phi_{8} = y^{2} \left(- 4 x^{3} y + 6 x^{3} + 6 x^{2} y - 9 x^{2} - 2 y + 3\right)\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-9.html'><img src='/img/element-Bogner-Fox-Schmit-3-9.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{9}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(0,1)\)<br /><br />\(\displaystyle \phi_{9} = x y^{2} \left(- 2 x^{2} y + 3 x^{2} + 4 x y - 6 x - 2 y + 3\right)\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-10.html'><img src='/img/element-Bogner-Fox-Schmit-3-10.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{10}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(0,1)\)<br /><br />\(\displaystyle \phi_{10} = y^{2} \left(2 x^{3} y - 2 x^{3} - 3 x^{2} y + 3 x^{2} + y - 1\right)\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-11.html'><img src='/img/element-Bogner-Fox-Schmit-3-11.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{11}:v\mapsto\frac{\partial^{2}}{\partial x\partial y}\nabla{v}(0,1)\)<br /><br />\(\displaystyle \phi_{11} = x y^{2} \left(x^{2} y - x^{2} - 2 x y + 2 x + y - 1\right)\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-12.html'><img src='/img/element-Bogner-Fox-Schmit-3-12.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{12}:v\mapsto v(1,1)\)<br /><br />\(\displaystyle \phi_{12} = x^{2} y^{2} \left(4 x y - 6 x - 6 y + 9\right)\)<br /><br />This DOF is associated with vertex 3 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-13.html'><img src='/img/element-Bogner-Fox-Schmit-3-13.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{13}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(1,1)\)<br /><br />\(\displaystyle \phi_{13} = x^{2} y^{2} \left(- 2 x y + 3 x + 2 y - 3\right)\)<br /><br />This DOF is associated with vertex 3 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-14.html'><img src='/img/element-Bogner-Fox-Schmit-3-14.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{14}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(1,1)\)<br /><br />\(\displaystyle \phi_{14} = x^{2} y^{2} \left(- 2 x y + 2 x + 3 y - 3\right)\)<br /><br />This DOF is associated with vertex 3 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Bogner-Fox-Schmit-3-15.html'><img src='/img/element-Bogner-Fox-Schmit-3-15.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{15}:v\mapsto\frac{\partial^{2}}{\partial x\partial y}\nabla{v}(1,1)\)<br /><br />\(\displaystyle \phi_{15} = x^{2} y^{2} \left(x y - x - y + 1\right)\)<br /><br />This DOF is associated with vertex 3 of the reference element.</div></div></div><script type='text/javascript'>
+function showeg(i){
+    for(var j=0;j<1;j++){
+        if(i==j){
+            document.getElementById('eg'+j).className='eglink current'
+            document.getElementById('egd'+j).className='egdetail current'
+        } else {
+            document.getElementById('eg'+j).className='eglink'
+            document.getElementById('egd'+j).className='egdetail'
+        }
+    }
+}
+</script><h2>References</h2>
+<ul class='citations'>
+<li>Bogner, F. K., Fox, R. L., and Schmit, L. A. The generation of interelement compatible stiffness and mass matrices by the use of interpolation formulae, <em>Proceedings of the Conference on Matrix Methods in Structural Mechanics</em>, 397&ndash;444, 1965. [<a href='/elements/bibtex/contributing-0.bib'>BibTeX</a>]</li>
+</ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

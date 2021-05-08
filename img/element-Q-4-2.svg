@@ -1,0 +1,33 @@
+<svg width='160.0' height='158.3648477835054' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<title>Basis function in a Q space</title>
+<desc>This plot is from DefElement (https://defelement.com) and is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license: https://creativecommons.org/licenses/by/4.0/</desc>
+<metadata id='license'>
+ <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://web.resource.org/cc/'>
+   <cc:Work rdf:about=''>
+     <dc:title>Basis function in a Q space</dc:title>
+     <dc:date>2021-05-08</dc:date>
+     <dc:creator>
+       <cc:Agent><dc:title>DefElement</dc:title></cc:Agent>
+       <cc:Agent><dc:title>Matthew Scroggs</dc:title></cc:Agent>
+     </dc:creator>
+     <dc:description>See document description</dc:description>
+     <cc:license rdf:resource='http://creativecommons.org/licenses/by/4.0/'/>
+     <dc:format>image/svg+xml</dc:format>
+     <dc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/>
+   </cc:Work>
+   <cc:License rdf:about='http://creativecommons.org/licenses/by/4.0/'>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Reproduction'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Distribution'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/DerivativeWorks'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Notice'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Attribution'/>
+   </cc:License>
+ </rdf:RDF>
+</metadata>
+<line x1='30.0' y1='128.3648477835054' x2='130.0' y2='128.3648477835054' stroke-width='3px' stroke-linecap='round' stroke='#44AAFF' />
+<path d='M 30.0 128.3648477835054 C 36.666666666666664 38.27814793384887,  43.333333333333336 22.27902354954184,  50.0 30.0' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 50.0 30.0 C 56.66666666666667 37.72097645045817,  63.33333333333333 69.16205373568164,  70.0 94.86242389175275' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 94.86242389175275 C 76.66666666666666 120.5627940478238,  83.33333333333334 140.52245707474287,  90.0 146.18727167525827' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 146.18727167525827 C 96.66666666666666 151.85208627577367,  103.33333333333333 143.222052449886,  110.0 132.64969556701078' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 110.0 132.64969556701078 C 116.66666666666667 122.0773386841355,  123.33333333333333 109.56265874427312,  130.0 128.3648477835054' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<circle cx='47.267316464601144' cy='128.3648477835054' r='10px' fill='white' stroke='#DD2299' stroke-width='2px' /><text x='47.267316464601144' style="font-family:'Varela Round',sans" y='128.3648477835054' text-anchor='middle' dominant-baseline='middle' fill='#DD2299'>2</text></svg>

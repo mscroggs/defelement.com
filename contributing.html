@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Contributing to DefElement</h1>
+<p>You can contribute to DefElement by forking the <a href='https://github.com/mscroggs/defelement.com'>DefElement GitHub repo</a>, making changes, then opening a pull request. </p>
+<h2>Defining an element</h2>
+<p>Elements in the DefElement database are defined using a yaml file in the <span style='font-family:monospace'>elements/</span> folder. The full file for a Lagrange element is: </p>
+<p class='pcode'>name:&nbsp;Lagrange<br />html-name:&nbsp;Lagrange<br />alt-names:<br />&nbsp;&nbsp;-&nbsp;Polynomial<br />&nbsp;&nbsp;-&nbsp;Galerkin<br />&nbsp;&nbsp;-&nbsp;DGT<br />&nbsp;&nbsp;-&nbsp;Hdiv&nbsp;trace<br />&nbsp;&nbsp;-&nbsp;Q&nbsp;(quadrilaterals&nbsp;and&nbsp;hexahedra)<br />notes:<br />&nbsp;&nbsp;-&nbsp;DGT&nbsp;and&nbsp;Hdiv&nbsp;trace&nbsp;are&nbsp;names&nbsp;given&nbsp;to&nbsp;this&nbsp;element&nbsp;when&nbsp;it&nbsp;is&nbsp;defined&nbsp;on&nbsp;the&nbsp;facets&nbsp;of&nbsp;a&nbsp;mesh.<br />short-names:<br />&nbsp;&nbsp;-&nbsp;P<br />&nbsp;&nbsp;-&nbsp;CG<br />&nbsp;&nbsp;-&nbsp;DG<br />exterior-calculus:<br />&nbsp;&nbsp;-&nbsp;P-,0,simplex<br />&nbsp;&nbsp;-&nbsp;P,0,simplex<br />&nbsp;&nbsp;-&nbsp;Q-,0,tp<br />ndofs:<br />&nbsp;&nbsp;interval:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;k+1<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000027<br />&nbsp;&nbsp;triangle:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k+1)(k+2)/2<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000217<br />&nbsp;&nbsp;tetrahedron:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k+1)(k+2)(k+3)/6<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000292<br />&nbsp;&nbsp;quadrilateral:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k+1)^2<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000290<br />&nbsp;&nbsp;hexahedron:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k+1)^3<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000578<br />entity-ndofs:<br />&nbsp;&nbsp;vertices:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;1<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000012<br />&nbsp;&nbsp;edges:<br />&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;k-1<br />&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000027<br />&nbsp;&nbsp;faces:<br />&nbsp;&nbsp;&nbsp;&nbsp;triangle:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k-1)(k-2)/2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000217<br />&nbsp;&nbsp;&nbsp;&nbsp;quadrilateral:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k-1)^2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000290<br />&nbsp;&nbsp;volumes:<br />&nbsp;&nbsp;&nbsp;&nbsp;tetrahedron:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k-1)(k-2)(k-3)/6<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000292<br />&nbsp;&nbsp;&nbsp;&nbsp;hexahedron:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula:&nbsp;(k-1)^3<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oeis:&nbsp;A000578<br />min-order:&nbsp;1<br />categories:<br />&nbsp;&nbsp;-&nbsp;scalar<br />reference&nbsp;elements:<br />&nbsp;&nbsp;-&nbsp;interval<br />&nbsp;&nbsp;-&nbsp;triangle<br />&nbsp;&nbsp;-&nbsp;tetrahedron<br />&nbsp;&nbsp;-&nbsp;quadrilateral<br />&nbsp;&nbsp;-&nbsp;hexahedron<br />dofs:<br />&nbsp;&nbsp;vertices:&nbsp;point&nbsp;evaluations<br />&nbsp;&nbsp;edges:&nbsp;point&nbsp;evaluations<br />&nbsp;&nbsp;faces:&nbsp;point&nbsp;evaluations<br />&nbsp;&nbsp;volumes:&nbsp;point&nbsp;evaluations<br />polynomial&nbsp;set:<br />&nbsp;&nbsp;interval:&nbsp;poly[k]<br />&nbsp;&nbsp;triangle:&nbsp;poly[k]<br />&nbsp;&nbsp;tetrahedron:&nbsp;poly[k]<br />&nbsp;&nbsp;quadrilateral:&nbsp;qoly[k]<br />&nbsp;&nbsp;hexahedron:&nbsp;qoly[k]<br />symfem:<br />&nbsp;&nbsp;interval:&nbsp;Lagrange<br />&nbsp;&nbsp;triangle:&nbsp;Lagrange<br />&nbsp;&nbsp;tetrahedron:&nbsp;Lagrange<br />&nbsp;&nbsp;quadrilateral:&nbsp;Q<br />&nbsp;&nbsp;hexahedron:&nbsp;Q<br />basix:&nbsp;Lagrange<br />examples:<br />&nbsp;&nbsp;-&nbsp;interval,1<br />&nbsp;&nbsp;-&nbsp;interval,2<br />&nbsp;&nbsp;-&nbsp;interval,3<br />&nbsp;&nbsp;-&nbsp;triangle,1<br />&nbsp;&nbsp;-&nbsp;triangle,2<br />&nbsp;&nbsp;-&nbsp;triangle,3<br />&nbsp;&nbsp;-&nbsp;quadrilateral,1<br />&nbsp;&nbsp;-&nbsp;quadrilateral,2<br />&nbsp;&nbsp;-&nbsp;quadrilateral,3<br />test:&nbsp;1<br /></p>
+<p>The entries in this yaml file are: </p>
+<table class='bordered align-left'> <thead> <tr><td>Name</td><td>Required</td><td>Description</td></tr> </thead> <tr><td><span style='font-family:monospace'>name</span></td><td>Yes</td><td>The name of the element (ascii).</td></tr> <tr><td><span style='font-family:monospace'>html-name</span></td><td>Yes</td><td>The name of the element, including HTML special characters.</td></tr> <tr><td><span style='font-family:monospace'>alt-names</span></td><td></td><td>Alternative (HTML) names of the element.</td></tr> <tr><td><span style='font-family:monospace'>short-names</span></td><td></td><td>Abbreviated names of the element.</td></tr> <tr><td><span style='font-family:monospace'>exterior-calculus</span></td><td></td><td>The family name and exerior derivatuve order.</td></tr> <tr><td><span style='font-family:monospace'>ndofs</span></td><td></td><td>The number of DOFs the element has and the A-numbers of the <a href='http://oeis.org'>OEIS</a> sequence(s) giving the number of DOFs.</td></tr> <tr><td><span style='font-family:monospace'>entity-ndofs</span></td><td></td><td>The number of DOFs the element has per subentity type and the A-numbers of the <a href='http://oeis.org'>OEIS</a> sequence(s) giving the number of DOFs.</td></tr> <tr><td><span style='font-family:monospace'>categories</span></td><td></td><td>Categories the element belongs to. Categories are defined in the file <a href='https://github.com/mscroggs/defelement.com/blob/main/data/categories'><span style='font-family:monospace'>/data/categories</span></a>.</td></tr> <tr><td><span style='font-family:monospace'>reference&nbsp;elements</span></td><td>Yes</td><td>The reference element(s) that this finite element can be defined on.</td></tr> <tr><td><span style='font-family:monospace'>dofs</span></td><td></td><td>Description of the DOFs of this element.</td></tr> <tr><td><span style='font-family:monospace'>polynomial&nbsp;set</span></td><td></td><td>The polynomial set of this element. This can use sets defined in the file <a href='https://github.com/mscroggs/defelement.com/blob/main/data/polysets'><span style='font-family:monospace'>/data/polysets</span></a>. Other sets can be given by writing <span style='font-family:monospace'><k>[LaTeX definition of set]</span>. Unions of multiple sets can be given, separated by <span style='font-family:monospace'> && </span>.</td></tr> <tr><td><span style='font-family:monospace'>examples</span></td><td></td><td>Reference elements and orders to be included in the examples section of the entry.</td></tr> <tr><td><span style='font-family:monospace'>symfem</span></td><td></td><td>The string used to define this element in <a href='https://github.com/mscroggs/symfem'>Symfem</a>'s <span style='font-family:monospace'>create_element</span> function.</td></tr> <tr><td><span style='font-family:monospace'>basix</span></td><td></td><td>The string used to define this element in <a href='https://github.com/fenics/basix'>Basix</a>'s <span style='font-family:monospace'>create_element</span> function.</td></tr> <tr><td><span style='font-family:monospace'>notes</span></td><td></td><td>Notes about the element.</td></tr> <tr><td><span style='font-family:monospace'>test</span></td><td></td><td>If included, this element's examples will be included when the test version of the website is built. If not, the examples will be skipped to speed up the test build.</td></tr> </table> </div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

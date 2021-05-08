@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<div id='sideplots' style='float:right;width:220px;padding:10px'> <div><center><a href='/img/element-Raviart-Thomas-1-1.html'><img src='/img/element-Raviart-Thomas-1-1.png'></a></center></div> <div style='font-size:80%;color:#AAAAAA;text-align:center'>A basis function of an order 1 <a href='/elements/raviart-thomas.html'>Raviart&ndash;Thomas space</a> on a triangle</div> <div><center><a href='/img/element-Q-2-3.html'><img src='/img/element-Q-2-3.png'></a></center></div> <div style='font-size:80%;color:#AAAAAA;text-align:center'>A basis function of an order 2 <a href='/elements/lagrange.html'>Q space</a> on a quadrilateral</div> <div><center><a href='/img/element-Nedelec-1-1.html'><img src='/img/element-Nedelec-1-1.png'></a></center></div> <div style='font-size:80%;color:#AAAAAA;text-align:center'>A basis function of an order 1 <a href='/elements/nedelec1.html'>N&eacute;d&eacute;lec (first kind) space</a> on a tetrahedron</div> <div><center><a href='/img/element-serendipity_Hcurl-1-13.html'><img src='/img/element-serendipity_Hcurl-1-13.png'></a></center></div> <div style='font-size:80%;color:#AAAAAA;text-align:center'>A basis function of an order 1 <a href='/elements/scurl.html'>Arnold&ndash;Awanou H(curl) space</a> on a hexahedron</div> </div> <p>Welcome to DefElement: an encyclopedia of finite element definitions. </p>
+<p>This website contains a collection of definitions of finite elements,  including commonly used elements such as <a href='/elements/lagrange.html'>Lagrange</a>, <a href='/elements/raviart-thomas.html'>Raviart&ndash;Thomas</a>, <a href='/elements/nedelec1.html'>N&eacute;d&eacute;lec (first kind)</a> and <a href='/elements/nedelec2.html'>N&eacute;d&eacute;lec (second kind)</a> elements, and more exotic elements such as <a href='/elements/sdiv.html'>serendipity H(div)</a>, <a href='/elements/scurl.html'>serendipity H(curl)</a> and <a href='/elements/regge.html'>Regge</a> elements. </p>
+<p>You can: <ul> <li><a href='/elements/index.html'>view the full alphabetical list of elements</a></li> <li><a href='/lists/categories'>view the elements by category</a></li> <li><a href='/lists/references'>view the elements by reference element</a></li> <li><a href='/families/index.html'>view the elements by family</a></li> </ul> </p>
+<h2>The finite element method</h2>
+<p>The finite element method is a numerical method that involves discretising a problem using a finite dimensional function space. These function spaces are commonly defined using a finite element on a reference element to derive basis functions for the space. This website contains a collection of finite elements, and examples of the basis functions they define. </p>
+<p>Following the <a href='/ciarlet.html'>Ciarlet definition</a> of a finite element, the elements on this website are defined using a reference element, a polynomial space, and a set of functionals. Each element's page describes how these are defined for that element, and gives examples of these and the basis functions they lead to for a selection of low-order spaces. </p>
+<p>You can read a detailed description of how the finite element definitions can be understood <a href='/ciarlet.html'>here</a>. </p>
+<h2>Contributing to DefElement</h2>
+<p>If you find an error or inaccuracy in a DefElement entry, please open <a href='https://github.com/mscroggs/defelement.com/issues'>an issue on GitHub</a>. You can also open an issue to suggest a new element that should be added to the database. </p>
+<p>Alternatively, you could fork the <a href='https://github.com/mscroggs/defelement.com'>DefElement GitHub repo</a>, make the changes yourself, and open a pull request. You can find more information about adding an element to DefElement <a href='/contributing.html'>here</a>. </p>
+<p>The functional information and examples on the element pages are generated using <a href='https://github.com/mscroggs/symfem'>symfem</a>, a symbolic finite element definition library. Before adding an element to DefElement, it should first be implemented in symfem. </p>
+</div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

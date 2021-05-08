@@ -1,0 +1,75 @@
+<svg width='160.0' height='190.0' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<title>Basis function in a Bernstein space</title>
+<desc>This plot is from DefElement (https://defelement.com) and is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license: https://creativecommons.org/licenses/by/4.0/</desc>
+<metadata id='license'>
+ <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://web.resource.org/cc/'>
+   <cc:Work rdf:about=''>
+     <dc:title>Basis function in a Bernstein space</dc:title>
+     <dc:date>2021-05-08</dc:date>
+     <dc:creator>
+       <cc:Agent><dc:title>DefElement</dc:title></cc:Agent>
+       <cc:Agent><dc:title>Matthew Scroggs</dc:title></cc:Agent>
+     </dc:creator>
+     <dc:description>See document description</dc:description>
+     <cc:license rdf:resource='http://creativecommons.org/licenses/by/4.0/'/>
+     <dc:format>image/svg+xml</dc:format>
+     <dc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/>
+   </cc:Work>
+   <cc:License rdf:about='http://creativecommons.org/licenses/by/4.0/'>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Reproduction'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/Distribution'/>
+     <cc:permits rdf:resource='http://web.resource.org/cc/DerivativeWorks'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Notice'/>
+     <cc:requires rdf:resource='http://web.resource.org/cc/Attribution'/>
+   </cc:License>
+ </rdf:RDF>
+</metadata>
+<path d='M 70.0 120.66666666666669 C 73.33333333333334 128.22222222222223,  76.66666666666666 135.77777777777777,  80.0 143.33333333333331' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 143.33333333333331 C 83.33333333333333 145.2,  86.66666666666667 147.06666666666666,  90.0 148.93333333333337' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<polygon points='30.0,130.0 130.0,138.0 80.0,110.0' fill='#BBEEFF' /><line x1='130.0' y1='138.0' x2='80.0' y2='110.0' stroke-width='3px' stroke-linecap='round' stroke='#AAAAAA' />
+<line x1='30.0' y1='130.0' x2='80.0' y2='110.0' stroke-width='3px' stroke-linecap='round' stroke='#AAAAAA' />
+<path d='M 60.0 98.0 C 63.33333333333333 105.55555555555556,  66.66666666666666 113.11111111111111,  70.0 120.66666666666669' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 120.66666666666669 C 76.66666666666666 130.0888888888889,  83.33333333333334 139.51111111111112,  90.0 148.93333333333337' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 120.66666666666669 C 73.33333333333333 122.53333333333333,  76.66666666666666 124.39999999999999,  80.0 126.26666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 126.26666666666667 C 83.33333333333333 133.82222222222222,  86.66666666666666 141.3777777777778,  90.0 148.93333333333337' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 148.93333333333337 C 93.33333333333334 150.8,  96.66666666666666 152.66666666666666,  100.0 154.53333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 50.0 75.33333333333334 C 53.33333333333333 82.8888888888889,  56.66666666666667 90.44444444444443,  60.0 98.0' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 60.0 98.0 C 66.66666666666666 107.42222222222222,  73.33333333333334 116.84444444444443,  80.0 126.26666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 60.0 98.0 C 63.33333333333333 99.86666666666666,  66.66666666666667 101.73333333333333,  70.0 103.60000000000001' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 103.60000000000001 C 73.33333333333333 111.15555555555557,  76.66666666666667 118.71111111111111,  80.0 126.26666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 126.26666666666667 C 86.66666666666667 135.68888888888887,  93.33333333333333 145.1111111111111,  100.0 154.53333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 126.26666666666667 C 83.33333333333334 128.13333333333333,  86.66666666666666 130.0,  90.0 131.86666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 131.86666666666667 C 93.33333333333333 139.42222222222225,  96.66666666666667 146.97777777777776,  100.0 154.53333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 100.0 154.53333333333333 C 103.33333333333333 156.39999999999998,  106.66666666666667 158.26666666666665,  110.0 160.13333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 40.0 52.666666666666686 C 43.333333333333336 60.22222222222223,  46.666666666666664 67.77777777777777,  50.0 75.33333333333334' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 50.0 75.33333333333334 C 56.666666666666664 84.75555555555556,  63.333333333333336 94.17777777777778,  70.0 103.60000000000001' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 50.0 75.33333333333334 C 53.33333333333333 77.2,  56.66666666666667 79.06666666666668,  60.0 80.93333333333334' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 60.0 80.93333333333334 C 63.333333333333336 88.4888888888889,  66.66666666666666 96.04444444444444,  70.0 103.60000000000001' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 103.60000000000001 C 76.66666666666667 113.02222222222224,  83.33333333333333 122.44444444444446,  90.0 131.86666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 103.60000000000001 C 73.33333333333334 105.46666666666667,  76.66666666666666 107.33333333333334,  80.0 109.20000000000002' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 109.20000000000002 C 83.33333333333333 116.75555555555557,  86.66666666666666 124.31111111111112,  90.0 131.86666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 131.86666666666667 C 96.66666666666666 141.2888888888889,  103.33333333333334 150.7111111111111,  110.0 160.13333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 131.86666666666667 C 93.33333333333331 133.73333333333335,  96.66666666666667 135.6,  100.0 137.46666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 100.0 137.46666666666667 C 103.33333333333333 145.0222222222222,  106.66666666666666 152.57777777777778,  110.0 160.13333333333333' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 110.0 160.13333333333333 C 113.33333333333331 162.0,  116.66666666666666 163.86666666666667,  120.0 165.73333333333335' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<circle cx='80.0' cy='126.0' r='10px' fill='white' stroke='#DD2299' stroke-width='2px' /><text x='80.0' style="font-family:'Varela Round',sans" y='126.0' text-anchor='middle' dominant-baseline='middle' fill='#DD2299'>2</text><path d='M 30.0 30.0 C 33.333333333333336 37.55555555555557,  36.666666666666664 45.111111111111114,  40.0 52.666666666666686' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 40.0 52.666666666666686 C 46.666666666666664 62.08888888888889,  53.333333333333336 71.51111111111112,  60.0 80.93333333333334' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 40.0 52.666666666666686 C 43.33333333333333 54.53333333333336,  46.66666666666667 56.400000000000006,  50.0 58.26666666666668' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<line x1='30.0' y1='130.0' x2='130.0' y2='138.0' stroke-width='3px' stroke-linecap='round' stroke='#AAAAAA' />
+<path d='M 50.0 58.26666666666668 C 53.333333333333336 65.82222222222222,  56.666666666666664 73.37777777777778,  60.0 80.93333333333334' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 60.0 80.93333333333334 C 66.66666666666667 90.35555555555557,  73.33333333333333 99.77777777777779,  80.0 109.20000000000002' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 60.0 80.93333333333334 C 63.333333333333336 82.80000000000001,  66.66666666666666 84.66666666666669,  70.0 86.53333333333335' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 86.53333333333335 C 73.33333333333333 94.0888888888889,  76.66666666666667 101.64444444444445,  80.0 109.20000000000002' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 109.20000000000002 C 86.66666666666666 118.62222222222223,  93.33333333333334 128.04444444444445,  100.0 137.46666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 80.0 109.20000000000002 C 83.33333333333333 111.06666666666666,  86.66666666666667 112.93333333333334,  90.0 114.8' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 114.8 C 93.33333333333333 122.35555555555555,  96.66666666666667 129.9111111111111,  100.0 137.46666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 100.0 137.46666666666667 C 106.66666666666666 146.88888888888889,  113.33333333333333 156.31111111111113,  120.0 165.73333333333335' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 100.0 137.46666666666667 C 103.33333333333333 139.33333333333331,  106.66666666666666 141.2,  110.0 143.0666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 110.0 143.0666666666667 C 113.33333333333333 150.62222222222223,  116.66666666666667 158.17777777777778,  120.0 165.73333333333335' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 120.0 165.73333333333335 C 123.33333333333334 167.60000000000002,  126.66666666666666 169.46666666666667,  130.0 171.33333333333331' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 30.0 30.0 C 36.666666666666664 39.422222222222246,  43.333333333333336 48.844444444444434,  50.0 58.26666666666668' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 50.0 58.26666666666668 C 56.66666666666667 67.6888888888889,  63.33333333333333 77.11111111111111,  70.0 86.53333333333335' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 70.0 86.53333333333335 C 76.66666666666666 95.95555555555556,  83.33333333333334 105.37777777777777,  90.0 114.8' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 90.0 114.8 C 96.66666666666666 124.22222222222221,  103.33333333333333 133.64444444444445,  110.0 143.0666666666667' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+<path d='M 110.0 143.0666666666667 C 116.66666666666667 152.4888888888889,  123.33333333333333 161.9111111111111,  130.0 171.33333333333331' stroke-width='2px' stroke-linecap='round' stroke='#FF8800' fill='none' />
+</svg>

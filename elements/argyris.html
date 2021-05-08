@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement: Argyris</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Argyris</h1><p><small><a href='/ciarlet.html'>Click here to read what the information on this page means.</a></small></p><table class='element-info'><tr><td>Orders</td><td>\(k=5\)</td></tr><tr><td>Reference&nbsp;elements</td><td><a href='/lists/references/triangle.html'>triangle</a></td></tr><tr><td>Polynomial&nbsp;set</td><td>\(\mathcal{P}_{k}\)<br /><a id='show_pset_link' href='javascript:show_psets()' style='display:block'>&darr; Show polynomial set definitions &darr;</a><a id='hide_pset_link' href='javascript:hide_psets()' style='display:none'>&uarr; Hide polynomial set definitions &uarr;</a><div id='psets' style='display:none'>\(\mathcal{P}_k=\operatorname{span}\left\{\prod_{i=1}^dx_i^{p_i}\middle|\sum_{i=1}^dp_i\leqslant k\right\}\)</div><script type='text/javascript'>
+function show_psets(){
+  document.getElementById('show_pset_link').style.display = 'none'
+  document.getElementById('hide_pset_link').style.display = 'block'
+  document.getElementById('psets').style.display = 'block'
+}
+function hide_psets(){
+  document.getElementById('show_pset_link').style.display = 'block'
+  document.getElementById('hide_pset_link').style.display = 'none'
+  document.getElementById('psets').style.display = 'none'
+}
+</script></td></tr><tr><td>DOFs</td><td>On each vertex: point evaluations,<br />point evaluations of derivatives in coordinate directions, and point evaluations of components of Jacobian<br />
+On each edge: point evaluations of normal derivatives at midpoints</td></tr><tr><td>Number&nbsp;of&nbsp;DOFs</td><td>triangle: \(21\)</td></tr><tr><td>Categories</td><td><a href='/lists/categories/scalar.html'>Scalar-valued elements</a></td></tr></table><h2>Implementations</h2>
+<table class='element-info'><tr><td>Symfem&nbsp;string</td><td><code>"Argyris"</code><br /><a id='show_symfem_link' href='javascript:show_symfem_eg()' style='display:block'>&darr; Show Symfem examples &darr;</a><a id='hide_symfem_link' href='javascript:hide_symfem_eg()' style='display:none'>&uarr; Hide Symfem examples &uarr;</a><div id='symfem_eg' style='display:none'>Before trying this example, you must install <a href='https://github.com/mscroggs/symfem'>Symfem</a>:<p class='pcode'>pip3 install symfem</p>This element can then be created with the following lines of Python:<p class='pcode'>import&nbsp;symfem<br /><br /><span style='color:#FF8800'>#&nbsp;Create&nbsp;Argyris&nbsp;order&nbsp;5&nbsp;on&nbsp;a&nbsp;triangle</span><br />element&nbsp;=&nbsp;symfem.create_element(<span style='color:#DD2299'>"triangle"</span>,&nbsp;<span style='color:#DD2299'>"Argyris"</span>,&nbsp;5)</p></div><script type='text/javascript'>
+function show_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='none'
+ document.getElementById('hide_symfem_link').style.display='block'
+ document.getElementById('symfem_eg').style.display='block'
+}
+function hide_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='block'
+ document.getElementById('hide_symfem_link').style.display='none'
+ document.getElementById('symfem_eg').style.display='none'
+}
+</script></td></tr></table><h2>Examples</h2>
+<a class='eglink current' href='javascript:showeg(0)' id='eg0'>triangle<br />order 5</a><div class='egdetail current' id='egd0'><ul>
+<li>\(R\) is the reference triangle. The following numbering of the subentities of the reference is used:</li>
+<center><a href='/img/ref-triangle.html'><img src='/img/ref-triangle.png'></a></center>
+<li>\(\mathcal{V}\) is spanned by: \(1\), \(x\), \(x^{2}\), \(x^{3}\), \(x^{4}\), \(x^{5}\), \(y\), \(x y\), \(x^{2} y\), \(x^{3} y\), \(x^{4} y\), \(y^{2}\), \(x y^{2}\), \(x^{2} y^{2}\), \(x^{3} y^{2}\), \(y^{3}\), \(x y^{3}\), \(x^{2} y^{3}\), \(y^{4}\), \(x y^{4}\), \(y^{5}\)</li>
+<li>\(\mathcal{L}=\{l_0,...,l_{20}\}\)</li>
+<li>Functionals and basis functions:</li></ul><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-0.html'><img src='/img/element-Argyris-5-0.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{0}:v\mapsto v(0,0)\)<br /><br />\(\displaystyle \phi_{0} = - 6 x^{5} + 15 x^{4} + 30 x^{3} y^{2} - 10 x^{3} + 30 x^{2} y^{3} - 30 x^{2} y^{2} - 6 y^{5} + 15 y^{4} - 10 y^{3} + 1\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-1.html'><img src='/img/element-Argyris-5-1.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{1}:v\mapsto\nabla{v}(0,0)\cdot\left(\begin{array}{c}1\\0\end{array}\right)\)<br /><br />\(\displaystyle \phi_{1} = x \left(- 3 x^{4} + 8 x^{3} + x^{2} y^{2} - 6 x^{2} - 10 x y^{3} + 10 x y^{2} - 8 y^{4} + 18 y^{3} - 11 y^{2} + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-2.html'><img src='/img/element-Argyris-5-2.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{2}:v\mapsto\nabla{v}(0,0)\cdot\left(\begin{array}{c}0\\1\end{array}\right)\)<br /><br />\(\displaystyle \phi_{2} = y \left(- 8 x^{4} - 10 x^{3} y + 18 x^{3} + x^{2} y^{2} + 10 x^{2} y - 11 x^{2} - 3 y^{4} + 8 y^{3} - 6 y^{2} + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-3.html'><img src='/img/element-Argyris-5-3.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{3}:v\mapsto\frac{\partial^2v}{\partial x\partial x}(0,0)\)<br /><br />\(\displaystyle \phi_{3} = \frac{x^{2} \left(- x^{3} + 3 x^{2} + 3 x y^{2} - 3 x + 2 y^{3} - 3 y^{2} + 1\right)}{2}\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-4.html'><img src='/img/element-Argyris-5-4.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{4}:v\mapsto\frac{\partial^2v}{\partial y\partial x}(0,0)\)<br /><br />\(\displaystyle \phi_{4} = x y \left(- 2 x^{3} - 6 x^{2} y + 5 x^{2} - 6 x y^{2} + 10 x y - 4 x - 2 y^{3} + 5 y^{2} - 4 y + 1\right)\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-5.html'><img src='/img/element-Argyris-5-5.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{5}:v\mapsto\frac{\partial^2v}{\partial y\partial y}(0,0)\)<br /><br />\(\displaystyle \phi_{5} = \frac{y^{2} \left(2 x^{3} + 3 x^{2} y - 3 x^{2} - y^{3} + 3 y^{2} - 3 y + 1\right)}{2}\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-6.html'><img src='/img/element-Argyris-5-6.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{6}:v\mapsto v(1,0)\)<br /><br />\(\displaystyle \phi_{6} = x^{2} \left(6 x^{3} - 15 x^{2} - 15 x y^{2} + 10 x - 15 y^{3} + 15 y^{2}\right)\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-7.html'><img src='/img/element-Argyris-5-7.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{7}:v\mapsto\nabla{v}(1,0)\cdot\left(\begin{array}{c}1\\0\end{array}\right)\)<br /><br />\(\displaystyle \phi_{7} = \frac{x^{2} \left(- 6 x^{3} + 14 x^{2} + 7 x y^{2} - 8 x + 7 y^{3} - 7 y^{2}\right)}{2}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-8.html'><img src='/img/element-Argyris-5-8.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{8}:v\mapsto\nabla{v}(1,0)\cdot\left(\begin{array}{c}0\\1\end{array}\right)\)<br /><br />\(\displaystyle \phi_{8} = \frac{x^{2} y \left(- 16 x^{2} - 37 x y + 28 x - 27 y^{2} + 37 y - 10\right)}{2}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-9.html'><img src='/img/element-Argyris-5-9.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{9}:v\mapsto\frac{\partial^2v}{\partial x\partial x}(1,0)\)<br /><br />\(\displaystyle \phi_{9} = \frac{x^{2} \left(2 x^{3} - 4 x^{2} - x y^{2} + 2 x - y^{3} + y^{2}\right)}{4}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-10.html'><img src='/img/element-Argyris-5-10.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{10}:v\mapsto\frac{\partial^2v}{\partial y\partial x}(1,0)\)<br /><br />\(\displaystyle \phi_{10} = \frac{x^{2} y \left(4 x^{2} + 7 x y - 6 x + 5 y^{2} - 7 y + 2\right)}{2}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-11.html'><img src='/img/element-Argyris-5-11.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{11}:v\mapsto\frac{\partial^2v}{\partial y\partial y}(1,0)\)<br /><br />\(\displaystyle \phi_{11} = \frac{x^{2} y^{2} \left(- 3 x - 5 y + 5\right)}{4}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-12.html'><img src='/img/element-Argyris-5-12.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{12}:v\mapsto v(0,1)\)<br /><br />\(\displaystyle \phi_{12} = y^{2} \left(- 15 x^{3} - 15 x^{2} y + 15 x^{2} + 6 y^{3} - 15 y^{2} + 10 y\right)\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-13.html'><img src='/img/element-Argyris-5-13.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{13}:v\mapsto\nabla{v}(0,1)\cdot\left(\begin{array}{c}1\\0\end{array}\right)\)<br /><br />\(\displaystyle \phi_{13} = \frac{x y^{2} \left(- 27 x^{2} - 37 x y + 37 x - 16 y^{2} + 28 y - 10\right)}{2}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-14.html'><img src='/img/element-Argyris-5-14.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{14}:v\mapsto\nabla{v}(0,1)\cdot\left(\begin{array}{c}0\\1\end{array}\right)\)<br /><br />\(\displaystyle \phi_{14} = \frac{y^{2} \left(7 x^{3} + 7 x^{2} y - 7 x^{2} - 6 y^{3} + 14 y^{2} - 8 y\right)}{2}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-15.html'><img src='/img/element-Argyris-5-15.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{15}:v\mapsto\frac{\partial^2v}{\partial x\partial x}(0,1)\)<br /><br />\(\displaystyle \phi_{15} = \frac{x^{2} y^{2} \left(- 5 x - 3 y + 5\right)}{4}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-16.html'><img src='/img/element-Argyris-5-16.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{16}:v\mapsto\frac{\partial^2v}{\partial y\partial x}(0,1)\)<br /><br />\(\displaystyle \phi_{16} = \frac{x y^{2} \left(5 x^{2} + 7 x y - 7 x + 4 y^{2} - 6 y + 2\right)}{2}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-17.html'><img src='/img/element-Argyris-5-17.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{17}:v\mapsto\frac{\partial^2v}{\partial y\partial y}(0,1)\)<br /><br />\(\displaystyle \phi_{17} = \frac{y^{2} \left(- x^{3} - x^{2} y + x^{2} + 2 y^{3} - 4 y^{2} + 2 y\right)}{4}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-18.html'><img src='/img/element-Argyris-5-18.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{18}:v\mapsto\nabla{v}(\tfrac{1}{2},\tfrac{1}{2})\cdot\hat{\boldsymbol{n}}_{0}\)<br /><br />\(\displaystyle \phi_{18} = 8 \sqrt{2} x^{2} y^{2} \left(- x - y + 1\right)\)<br /><br />This DOF is associated with edge 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-19.html'><img src='/img/element-Argyris-5-19.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{19}:v\mapsto\nabla{v}(0,\tfrac{1}{2})\cdot\hat{\boldsymbol{n}}_{1}\)<br /><br />\(\displaystyle \phi_{19} = 16 x y^{2} \left(- x^{2} - 2 x y + 2 x - y^{2} + 2 y - 1\right)\)<br /><br />This DOF is associated with edge 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Argyris-5-20.html'><img src='/img/element-Argyris-5-20.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{20}:v\mapsto\nabla{v}(\tfrac{1}{2},0)\cdot\hat{\boldsymbol{n}}_{2}\)<br /><br />\(\displaystyle \phi_{20} = 16 x^{2} y \left(x^{2} + 2 x y - 2 x + y^{2} - 2 y + 1\right)\)<br /><br />This DOF is associated with edge 2 of the reference element.</div></div></div><script type='text/javascript'>
+function showeg(i){
+    for(var j=0;j<1;j++){
+        if(i==j){
+            document.getElementById('eg'+j).className='eglink current'
+            document.getElementById('egd'+j).className='egdetail current'
+        } else {
+            document.getElementById('eg'+j).className='eglink'
+            document.getElementById('egd'+j).className='egdetail'
+        }
+    }
+}
+</script><h2>References</h2>
+<ul class='citations'>
+<li>Argyris, J. H., Fried, I., and Scharpf, D. W. The TUBA Family of Plate Elements for the Matrix Displacement Method, <em>The Aeronautical Journal</em> 72(692), 701&ndash;709, 1968. [DOI:&nbsp;<a href='https://doi.org/10.1017/S000192400008489X'>10.1017/S000192400008489X</a>] [<a href='/elements/bibtex/contributing-0.bib'>BibTeX</a>]</li>
+</ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

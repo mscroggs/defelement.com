@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement: reduced Hsieh&ndash;Clough&ndash;Tocher</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Reduced Hsieh&ndash;Clough&ndash;Tocher</h1><p><small><a href='/ciarlet.html'>Click here to read what the information on this page means.</a></small></p><table class='element-info'><tr><td>Abbreviated&nbsp;names</td><td>rHCT</td></tr><tr><td>Orders</td><td>\(k=3\)</td></tr><tr><td>Reference&nbsp;elements</td><td><a href='/lists/references/triangle.html'>triangle</a></td></tr><tr><td>Number&nbsp;of&nbsp;DOFs</td><td>triangle: \(9\)</td></tr><tr><td>Categories</td><td><a href='/lists/categories/scalar.html'>Scalar-valued elements</a></td></tr></table><h2>Implementations</h2>
+<table class='element-info'><tr><td>Symfem&nbsp;string</td><td><code>"rHCT"</code><br /><a id='show_symfem_link' href='javascript:show_symfem_eg()' style='display:block'>&darr; Show Symfem examples &darr;</a><a id='hide_symfem_link' href='javascript:hide_symfem_eg()' style='display:none'>&uarr; Hide Symfem examples &uarr;</a><div id='symfem_eg' style='display:none'>Before trying this example, you must install <a href='https://github.com/mscroggs/symfem'>Symfem</a>:<p class='pcode'>pip3 install symfem</p>This element can then be created with the following lines of Python:<p class='pcode'>import&nbsp;symfem<br /><br /><span style='color:#FF8800'>#&nbsp;Create&nbsp;reduced&nbsp;Hsieh-Clough-Tocher&nbsp;order&nbsp;3&nbsp;on&nbsp;a&nbsp;triangle</span><br />element&nbsp;=&nbsp;symfem.create_element(<span style='color:#DD2299'>"triangle"</span>,&nbsp;<span style='color:#DD2299'>"rHCT"</span>,&nbsp;3)</p></div><script type='text/javascript'>
+function show_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='none'
+ document.getElementById('hide_symfem_link').style.display='block'
+ document.getElementById('symfem_eg').style.display='block'
+}
+function hide_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='block'
+ document.getElementById('hide_symfem_link').style.display='none'
+ document.getElementById('symfem_eg').style.display='none'
+}
+</script></td></tr></table><h2>Examples</h2>
+<a class='eglink current' href='javascript:showeg(0)' id='eg0'>triangle<br />order 3</a><div class='egdetail current' id='egd0'><ul>
+<li>\(R\) is the reference triangle. The following numbering of the subentities of the reference is used:</li>
+<center><a href='/img/ref-triangle.html'><img src='/img/ref-triangle.png'></a></center>
+<li>\(\mathcal{V}\) is spanned by: \(\begin{cases}
+2 x^{3} - 3 x^{2} + 12 x y^{2} + 40 y^{3} - 24 y^{2} + 1&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\40 x^{3} + 12 x^{2} y - 24 x^{2} + 2 y^{3} - 3 y^{2} + 1&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+x^{3} - 2 x^{2} + x + 8 y^{3} - 4 y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\x \left(6 x^{2} + 3 x y - 5 x - y + 1\right)&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+y \left(3 x y - x + 6 y^{2} - 5 y + 1\right)&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\8 x^{3} - 4 x^{2} + y^{3} - 2 y^{2} + y&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+- 2 x^{3} + 3 x^{2} - 12 x y^{2} + 14 y^{3} - 3 y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 34 x^{3} - 87 x^{2} y + 81 x^{2} - 75 x y^{2} + 135 x y - 60 x - 20 y^{3} + 54 y^{2} - 48 y + 14&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+x^{3} - x^{2} + 3 x y^{2} - 4 y^{3} + y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\11 x^{3} + \tfrac{57 x^{2} y}{2} - \tfrac{51 x^{2}}{2} + \tfrac{51 x y^{2}}{2} - \tfrac{89 x y}{2} + 19 x + 7 y^{3} - \tfrac{37 y^{2}}{2} + 16 y - \tfrac{9}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+y \left(- 3 x y + x + 3 y^{2} - y\right)&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 5 x^{3} - \tfrac{27 x^{2} y}{2} + \tfrac{25 x^{2}}{2} - \tfrac{27 x y^{2}}{2} + \tfrac{47 x y}{2} - 10 x - 4 y^{3} + \tfrac{21 y^{2}}{2} - 9 y + \tfrac{5}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 20 x^{3} - 75 x^{2} y + 54 x^{2} - 87 x y^{2} + 135 x y - 48 x - 34 y^{3} + 81 y^{2} - 60 y + 14&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\14 x^{3} - 12 x^{2} y - 3 x^{2} - 2 y^{3} + 3 y^{2}&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 4 x^{3} - \tfrac{27 x^{2} y}{2} + \tfrac{21 x^{2}}{2} - \tfrac{27 x y^{2}}{2} + \tfrac{47 x y}{2} - 9 x - 5 y^{3} + \tfrac{25 y^{2}}{2} - 10 y + \tfrac{5}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\x \left(3 x^{2} - 3 x y - x + y\right)&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\), \(\begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\7 x^{3} + \tfrac{51 x^{2} y}{2} - \tfrac{37 x^{2}}{2} + \tfrac{57 x y^{2}}{2} - \tfrac{89 x y}{2} + 16 x + 11 y^{3} - \tfrac{51 y^{2}}{2} + 19 y - \tfrac{9}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\- 4 x^{3} + 3 x^{2} y + x^{2} + y^{3} - y^{2}&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)</li>
+<li>\(\mathcal{L}=\{l_0,...,l_{8}\}\)</li>
+<li>Functionals and basis functions:</li></ul><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-0.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-0.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{0}:v\mapsto v(0,0)\)<br /><br />\(\displaystyle \phi_{0} = \begin{cases}
+2 x^{3} - 3 x^{2} + 12 x y^{2} + 40 y^{3} - 24 y^{2} + 1&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\40 x^{3} + 12 x^{2} y - 24 x^{2} + 2 y^{3} - 3 y^{2} + 1&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-1.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-1.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{1}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(0,0)\)<br /><br />\(\displaystyle \phi_{1} = \begin{cases}
+x^{3} - 2 x^{2} + x + 8 y^{3} - 4 y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\x \left(6 x^{2} + 3 x y - 5 x - y + 1\right)&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-2.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-2.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{2}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(0,0)\)<br /><br />\(\displaystyle \phi_{2} = \begin{cases}
+y \left(3 x y - x + 6 y^{2} - 5 y + 1\right)&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\8 x^{3} - 4 x^{2} + y^{3} - 2 y^{2} + y&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-3.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-3.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{3}:v\mapsto v(1,0)\)<br /><br />\(\displaystyle \phi_{3} = \begin{cases}
+- 2 x^{3} + 3 x^{2} - 12 x y^{2} + 14 y^{3} - 3 y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 34 x^{3} - 87 x^{2} y + 81 x^{2} - 75 x y^{2} + 135 x y - 60 x - 20 y^{3} + 54 y^{2} - 48 y + 14&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-4.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-4.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{4}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(1,0)\)<br /><br />\(\displaystyle \phi_{4} = \begin{cases}
+x^{3} - x^{2} + 3 x y^{2} - 4 y^{3} + y^{2}&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\11 x^{3} + \tfrac{57 x^{2} y}{2} - \tfrac{51 x^{2}}{2} + \tfrac{51 x y^{2}}{2} - \tfrac{89 x y}{2} + 19 x + 7 y^{3} - \tfrac{37 y^{2}}{2} + 16 y - \tfrac{9}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-5.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-5.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{5}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(1,0)\)<br /><br />\(\displaystyle \phi_{5} = \begin{cases}
+y \left(- 3 x y + x + 3 y^{2} - y\right)&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 5 x^{3} - \tfrac{27 x^{2} y}{2} + \tfrac{25 x^{2}}{2} - \tfrac{27 x y^{2}}{2} + \tfrac{47 x y}{2} - 10 x - 4 y^{3} + \tfrac{21 y^{2}}{2} - 9 y + \tfrac{5}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\0&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-6.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-6.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{6}:v\mapsto v(0,1)\)<br /><br />\(\displaystyle \phi_{6} = \begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 20 x^{3} - 75 x^{2} y + 54 x^{2} - 87 x y^{2} + 135 x y - 48 x - 34 y^{3} + 81 y^{2} - 60 y + 14&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\14 x^{3} - 12 x^{2} y - 3 x^{2} - 2 y^{3} + 3 y^{2}&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-7.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-7.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{7}:v\mapsto\frac{\partial}{\partial x}\nabla{v}(0,1)\)<br /><br />\(\displaystyle \phi_{7} = \begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\- 4 x^{3} - \tfrac{27 x^{2} y}{2} + \tfrac{21 x^{2}}{2} - \tfrac{27 x y^{2}}{2} + \tfrac{47 x y}{2} - 9 x - 5 y^{3} + \tfrac{25 y^{2}}{2} - 10 y + \tfrac{5}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\x \left(3 x^{2} - 3 x y - x + y\right)&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-reduced_Hsieh-Clough-Tocher-3-8.html'><img src='/img/element-reduced_Hsieh-Clough-Tocher-3-8.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{8}:v\mapsto\frac{\partial}{\partial y}\nabla{v}(0,1)\)<br /><br />\(\displaystyle \phi_{8} = \begin{cases}
+0&\text{in }\operatorname{Triangle}(((0, 0), (1, 0), (1/3, 1/3)))\\7 x^{3} + \tfrac{51 x^{2} y}{2} - \tfrac{37 x^{2}}{2} + \tfrac{57 x y^{2}}{2} - \tfrac{89 x y}{2} + 16 x + 11 y^{3} - \tfrac{51 y^{2}}{2} + 19 y - \tfrac{9}{2}&\text{in }\operatorname{Triangle}(((1, 0), (0, 1), (1/3, 1/3)))\\- 4 x^{3} + 3 x^{2} y + x^{2} + y^{3} - y^{2}&\text{in }\operatorname{Triangle}(((0, 1), (0, 0), (1/3, 1/3)))\end{cases}\)<br /><br />This DOF is associated with vertex 2 of the reference element.</div></div></div><script type='text/javascript'>
+function showeg(i){
+    for(var j=0;j<1;j++){
+        if(i==j){
+            document.getElementById('eg'+j).className='eglink current'
+            document.getElementById('egd'+j).className='egdetail current'
+        } else {
+            document.getElementById('eg'+j).className='eglink'
+            document.getElementById('egd'+j).className='egdetail'
+        }
+    }
+}
+</script><h2>References</h2>
+<ul class='citations'>
+<li>Ciarlet, P. G. Interpolation error estimates for the reduced Hsieh-Clough-Tocher triangle, <em>Mathematics of Computation</em> 32, 335&ndash;344, 1978. [DOI:&nbsp;<a href='https://doi.org/10.1090/S0025-5718-1978-0482249-1'>10.1090/S0025-5718-1978-0482249-1</a>] [<a href='/elements/bibtex/contributing-0.bib'>BibTeX</a>]</li>
+</ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>

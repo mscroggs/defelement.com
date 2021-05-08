@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='An encyclopedia of finite element definitions'>
+<meta name='keywords' content='finite element methods,Ciarlet elements,math,maths,engineering'>
+<title>DefElement: Crouzeix&ndash;Falk</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='content'>
+<div class='title'><a href='/'><span class='first'>Def</span><span class='second'>Element</span></a></div>
+<div class='tagline'>an encyclopedia of finite element definitions</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Crouzeix&ndash;Falk</h1><p><small><a href='/ciarlet.html'>Click here to read what the information on this page means.</a></small></p><table class='element-info'><tr><td>Abbreviated&nbsp;names</td><td>FS</td></tr><tr><td>Orders</td><td>\(k=3\)</td></tr><tr><td>Reference&nbsp;elements</td><td><a href='/lists/references/triangle.html'>triangle</a></td></tr><tr><td>Polynomial&nbsp;set</td><td>\(\mathcal{P}_{k}\)<br /><a id='show_pset_link' href='javascript:show_psets()' style='display:block'>&darr; Show polynomial set definitions &darr;</a><a id='hide_pset_link' href='javascript:hide_psets()' style='display:none'>&uarr; Hide polynomial set definitions &uarr;</a><div id='psets' style='display:none'>\(\mathcal{P}_k=\operatorname{span}\left\{\prod_{i=1}^dx_i^{p_i}\middle|\sum_{i=1}^dp_i\leqslant k\right\}\)</div><script type='text/javascript'>
+function show_psets(){
+  document.getElementById('show_pset_link').style.display = 'none'
+  document.getElementById('hide_pset_link').style.display = 'block'
+  document.getElementById('psets').style.display = 'block'
+}
+function hide_psets(){
+  document.getElementById('show_pset_link').style.display = 'block'
+  document.getElementById('hide_pset_link').style.display = 'none'
+  document.getElementById('psets').style.display = 'none'
+}
+</script></td></tr><tr><td>DOFs</td><td>On each facet: point evaluation at two points (but only one point on one of the edges)</td></tr><tr><td>Number&nbsp;of&nbsp;DOFs</td><td>triangle: \(10\)</td></tr><tr><td>Categories</td><td><a href='/lists/categories/scalar.html'>Scalar-valued elements</a></td></tr></table><h2>Implementations</h2>
+<table class='element-info'><tr><td>Symfem&nbsp;string</td><td><code>"Crouzeix-Falk"</code><br /><a id='show_symfem_link' href='javascript:show_symfem_eg()' style='display:block'>&darr; Show Symfem examples &darr;</a><a id='hide_symfem_link' href='javascript:hide_symfem_eg()' style='display:none'>&uarr; Hide Symfem examples &uarr;</a><div id='symfem_eg' style='display:none'>Before trying this example, you must install <a href='https://github.com/mscroggs/symfem'>Symfem</a>:<p class='pcode'>pip3 install symfem</p>This element can then be created with the following lines of Python:<p class='pcode'>import&nbsp;symfem<br /><br /><span style='color:#FF8800'>#&nbsp;Create&nbsp;Crouzeix-Falk&nbsp;order&nbsp;3&nbsp;on&nbsp;a&nbsp;triangle</span><br />element&nbsp;=&nbsp;symfem.create_element(<span style='color:#DD2299'>"triangle"</span>,&nbsp;<span style='color:#DD2299'>"Crouzeix-Falk"</span>,&nbsp;3)</p></div><script type='text/javascript'>
+function show_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='none'
+ document.getElementById('hide_symfem_link').style.display='block'
+ document.getElementById('symfem_eg').style.display='block'
+}
+function hide_symfem_eg(){
+ document.getElementById('show_symfem_link').style.display='block'
+ document.getElementById('hide_symfem_link').style.display='none'
+ document.getElementById('symfem_eg').style.display='none'
+}
+</script></td></tr></table><h2>Examples</h2>
+<a class='eglink current' href='javascript:showeg(0)' id='eg0'>triangle<br />order 3</a><div class='egdetail current' id='egd0'><ul>
+<li>\(R\) is the reference triangle. The following numbering of the subentities of the reference is used:</li>
+<center><a href='/img/ref-triangle.html'><img src='/img/ref-triangle.png'></a></center>
+<li>\(\mathcal{V}\) is spanned by: \(1\), \(x\), \(x^{2}\), \(x^{3}\), \(y\), \(x y\), \(x^{2} y\), \(y^{2}\), \(x y^{2}\), \(y^{3}\)</li>
+<li>\(\mathcal{L}=\{l_0,...,l_{9}\}\)</li>
+<li>Functionals and basis functions:</li></ul><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-0.html'><img src='/img/element-Crouzeix-Raviart-3-0.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{0}:v\mapsto v(\tfrac{3}{4},\tfrac{1}{4})\)<br /><br />\(\displaystyle \phi_{0} = \frac{64 x^{3}}{3} + 42 x^{2} y - 32 x^{2} + \frac{94 x y^{2}}{3} - \frac{134 x y}{3} + \frac{44 x}{3} + \frac{64 y^{3}}{3} - 32 y^{2} + \frac{44 y}{3} - 2\)<br /><br />This DOF is associated with edge 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-1.html'><img src='/img/element-Crouzeix-Raviart-3-1.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{1}:v\mapsto v(\tfrac{1}{2},\tfrac{1}{2})\)<br /><br />\(\displaystyle \phi_{1} = - 32 x^{3} - 43 x^{2} y + 48 x^{2} - 43 x y^{2} + 59 x y - 22 x - 32 y^{3} + 48 y^{2} - 22 y + 3\)<br /><br />This DOF is associated with edge 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-2.html'><img src='/img/element-Crouzeix-Raviart-3-2.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{2}:v\mapsto v(\tfrac{1}{4},\tfrac{3}{4})\)<br /><br />\(\displaystyle \phi_{2} = \frac{64 x^{3}}{3} + \frac{94 x^{2} y}{3} - 32 x^{2} + 42 x y^{2} - \frac{134 x y}{3} + \frac{44 x}{3} + \frac{64 y^{3}}{3} - 32 y^{2} + \frac{44 y}{3} - 2\)<br /><br />This DOF is associated with edge 0 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-3.html'><img src='/img/element-Crouzeix-Raviart-3-3.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{3}:v\mapsto v(0,\tfrac{1}{4})\)<br /><br />\(\displaystyle \phi_{3} = - \frac{64 x^{3}}{3} - 22 x^{2} y + 32 x^{2} - \frac{34 x y^{2}}{3} + \frac{74 x y}{3} - \frac{44 x}{3} + \frac{32 y^{3}}{3} - 8 y^{2} - \frac{8 y}{3} + 2\)<br /><br />This DOF is associated with edge 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-4.html'><img src='/img/element-Crouzeix-Raviart-3-4.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{4}:v\mapsto v(0,\tfrac{1}{2})\)<br /><br />\(\displaystyle \phi_{4} = 32 x^{3} + 53 x^{2} y - 48 x^{2} + 53 x y^{2} - 69 x y + 22 x - 16 y^{2} + 16 y - 3\)<br /><br />This DOF is associated with edge 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-5.html'><img src='/img/element-Crouzeix-Raviart-3-5.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{5}:v\mapsto v(0,\tfrac{3}{4})\)<br /><br />\(\displaystyle \phi_{5} = - \frac{64 x^{3}}{3} - \frac{98 x^{2} y}{3} + 32 x^{2} - \frac{130 x y^{2}}{3} + 46 x y - \frac{44 x}{3} - \frac{32 y^{3}}{3} + 24 y^{2} - \frac{40 y}{3} + 2\)<br /><br />This DOF is associated with edge 1 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-6.html'><img src='/img/element-Crouzeix-Raviart-3-6.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{6}:v\mapsto v(\tfrac{1}{4},0)\)<br /><br />\(\displaystyle \phi_{6} = \frac{32 x^{3}}{3} - \frac{34 x^{2} y}{3} - 8 x^{2} - 22 x y^{2} + \frac{74 x y}{3} - \frac{8 x}{3} - \frac{64 y^{3}}{3} + 32 y^{2} - \frac{44 y}{3} + 2\)<br /><br />This DOF is associated with edge 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-7.html'><img src='/img/element-Crouzeix-Raviart-3-7.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{7}:v\mapsto v(\tfrac{1}{2},0)\)<br /><br />\(\displaystyle \phi_{7} = 53 x^{2} y - 16 x^{2} + 53 x y^{2} - 69 x y + 16 x + 32 y^{3} - 48 y^{2} + 22 y - 3\)<br /><br />This DOF is associated with edge 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-8.html'><img src='/img/element-Crouzeix-Raviart-3-8.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{8}:v\mapsto v(\tfrac{3}{4},0)\)<br /><br />\(\displaystyle \phi_{8} = - \frac{32 x^{3}}{3} - \frac{130 x^{2} y}{3} + 24 x^{2} - \frac{98 x y^{2}}{3} + 46 x y - \frac{40 x}{3} - \frac{64 y^{3}}{3} + 32 y^{2} - \frac{44 y}{3} + 2\)<br /><br />This DOF is associated with edge 2 of the reference element.</div></div><div class='basisf'><div style='display:inline-block'><a href='/img/element-Crouzeix-Raviart-3-9.html'><img src='/img/element-Crouzeix-Raviart-3-9.png'></a></div><div style='display:inline-block;padding-left:10px;padding-bottom:10px'>\(\displaystyle l_{9}:v\mapsto v(\tfrac{1}{3},\tfrac{1}{3})\)<br /><br />\(\displaystyle \phi_{9} = 27 x y \left(- x - y + 1\right)\)<br /><br />This DOF is associated with face 0 of the reference element.</div></div></div><script type='text/javascript'>
+function showeg(i){
+    for(var j=0;j<1;j++){
+        if(i==j){
+            document.getElementById('eg'+j).className='eglink current'
+            document.getElementById('egd'+j).className='egdetail current'
+        } else {
+            document.getElementById('eg'+j).className='eglink'
+            document.getElementById('egd'+j).className='egdetail'
+        }
+    }
+}
+</script><h2>References</h2>
+<ul class='citations'>
+<li>Crouzeix, M. and Falk, R. S. Nonconforming finite elements for the Stokes problem, <em>Mathematics of Computation</em> 52, 437&ndash;456, 1989. [DOI:&nbsp;<a href='https://doi.org/10.2307/2008475'>10.2307/2008475</a>] [<a href='/elements/bibtex/contributing-0.bib'>BibTeX</a>]</li>
+</ul></div>
+</div>
+<div class='footer'>
+<div class='content'>
+Created by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>, 2020-2021. <a href='/citing.html'>Citing this website</a>.
+</div>
+</div>
+</div>
+</body>
+</html>
