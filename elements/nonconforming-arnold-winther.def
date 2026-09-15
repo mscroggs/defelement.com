@@ -20,7 +20,9 @@ dofs:
   edges: integral moments of normal-normal and normal-tangent inner products with (lagrange,1)
   faces: integral moments of three components with (lagrange,0)
 mapping: double contravariant Piola
-sobolev: H(div div)
+sobolev: L2
+notes:
+  - The facet moments of the inner product with normals are continuous between cells
 implementations:
   symfem: nonconforming AW
   fiat: ArnoldWintherNC DEGREEMAP=k+1
